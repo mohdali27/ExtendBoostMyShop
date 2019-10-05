@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd"> 
+    <module name="Webappmate_ExtendBoostMyShop" setup_version="1.0.1">
+        <sequence>
+            <module name="BoostMyShop_AdvancedStock" />
+            <module name="BoostMyShop_Supplier" />
+            <module name="BoostMyShop_OrderPreparation" />
+            <module name="BoostMyShop_DropShip" />
+        </sequence>
+    </module>
+</config>

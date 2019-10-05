@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="BoostMyShop\Supplier\Block\Supplier\Edit\Form" type="Webappmate\ExtendBoostMyShop\Block\Supplier\Edit\Form" />
+    <preference for="BoostMyShop\Supplier\Controller\Adminhtml\Supplier\Save" type="Webappmate\ExtendBoostMyShop\Controller\Adminhtml\Supplier\Save" />
+    <preference for="Magento\OfflineShipping\Model\Carrier\Tablerate" type="Webappmate\ExtendBoostMyShop\Model\Carrier\Tablerate" />
+</config>
