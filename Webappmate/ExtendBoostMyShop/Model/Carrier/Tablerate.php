@@ -234,13 +234,17 @@ $rate['price'] = $totalRate;
                 $package_value = $item->getRowTotal();
                 $package_weight = $item->getRowWeight();
                 $package_qty = $item->getQty();
-                $supId = $defaultSupplier->getSpId();
+
+                //echo "<pre>";print_r(json_encode($item->getData()));
+                //echo "<pre>";print_r(json_encode($defaultSupplier->getData()));
+                $supId = $defaultSupplier->getSpSupId();
                 $request->setConditionName($conditionName);
                 $request->setPackageValue($package_value);
                 $request->setPackageWeight($package_weight);
                 $request->setPackageQty($package_qty);
                 $request->setSupId($supId);
                 $rate = $this->getSupRate($request);
+                $supRate[$key]['sup_id'] = $supId;
                 if($rate){
                     $supRate[$key]['sup_rate'] = isset($rate['price'])?$rate['price']:0;
                 } else {
@@ -251,12 +255,15 @@ $rate['price'] = $totalRate;
             } else {
                 // If no supplier associated then set default as price 0 or get global table rate from magento configuration
                 $supRate[$key]['sup_rate'] = 0;
+                $supRate[$key]['sup_id'] = 0;
             }
             
             //save sup_rate into quote item
             $item->setSupplierRate($supRate[$key]['sup_rate'])->save();
             //echo get_class($item);die;
         }
+
+        //echo "<pre>";print_r($supRate);die;
         return $supRate;
     }
 

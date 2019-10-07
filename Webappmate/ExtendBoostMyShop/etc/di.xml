@@ -3,4 +3,9 @@
     <preference for="BoostMyShop\Supplier\Block\Supplier\Edit\Form" type="Webappmate\ExtendBoostMyShop\Block\Supplier\Edit\Form" />
     <preference for="BoostMyShop\Supplier\Controller\Adminhtml\Supplier\Save" type="Webappmate\ExtendBoostMyShop\Controller\Adminhtml\Supplier\Save" />
     <preference for="Magento\OfflineShipping\Model\Carrier\Tablerate" type="Webappmate\ExtendBoostMyShop\Model\Carrier\Tablerate" />
+    <type name="Magento\Quote\Model\Quote\Item\ToOrderItem">
+        <plugin name="supplier_order_item" type="Webappmate\ExtendBoostMyShop\Model\Plugin\Quote\Item\ToOrderItem"/>
+    </type>
+    <preference for="BoostMyShop\DropShip\Model\DropShip" type="Webappmate\ExtendBoostMyShop\Model\DropShip" />
+    <preference for="BoostMyShop\DropShip\Block\Main\Tab\Renderer\PendingShipping\Misc" type="Webappmate\ExtendBoostMyShop\Block\Main\Tab\Renderer\PendingShipping\Misc" />
 </config>
